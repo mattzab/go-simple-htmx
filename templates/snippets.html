@@ -1,0 +1,127 @@
+{{ define "swapinhtml" }}
+<h1 id="swapin">This content was swapped in with HTMX!</h1>
+<p>Click the button again to swap back.</p>
+{{ end }}
+
+{{ define "snippet2" }}
+<span class="has-text-danger">This text was dynamically loaded!</span>
+{{ end }}
+
+{{ define "explainhtmx" }}
+<div class="box mt-4">
+  <h3 class="title is-4">What is HTMX?</h3>
+  <p>HTMX allows you to access AJAX, CSS Transitions, WebSockets and Server Sent Events directly in HTML, using attributes, so you can build modern user interfaces with the simplicity and power of hypertext.</p>
+  <p>It extends HTML in a backward-compatible way to allow for powerful dynamic features without JavaScript.</p>
+  <a hx-get="/html/moreinfo" hx-target="#htmx-content" hx-swap="innerHTML" class="button is-small is-info mt-2">Learn More</a>
+</div>
+{{ end }}
+
+{{ define "moreinfo" }}
+<div class="box mt-4">
+  <h3 class="title is-4">How HTMX Works</h3>
+  <p>HTMX uses HTML attributes like:</p>
+  <ul>
+    <li><code>hx-get</code>: Makes a GET request to the given URL</li>
+    <li><code>hx-post</code>: Makes a POST request to the given URL</li>
+    <li><code>hx-target</code>: Specifies where to place the response</li>
+    <li><code>hx-trigger</code>: Specifies what triggers the request</li>
+  </ul>
+  <a hx-get="/html/explainhtmx" hx-target="#htmx-content" hx-swap="innerHTML" class="button is-small is-warning mt-2">Go Back</a>
+</div>
+{{ end }}
+
+{{ define "bulmainfo" }}
+<div class="box mt-4">
+  <h3 class="title is-4">What is Bulma CSS?</h3>
+  <p>Bulma is a free, open source CSS framework based on Flexbox. It's 100% responsive, fully modular, and built with modern CSS.</p>
+  <p>It provides ready-to-use frontend components that you can easily combine to build responsive web interfaces.</p>
+  <a hx-get="/html/bulmafeatures" hx-target="#bulma-content" hx-swap="innerHTML" class="button is-small is-info mt-2">Key Features</a>
+</div>
+{{ end }}
+
+{{ define "bulmafeatures" }}
+<div class="box mt-4">
+  <h3 class="title is-4">Bulma Key Features</h3>
+  <ul>
+    <li><strong>No JavaScript</strong> - Pure CSS framework with no JavaScript dependencies</li>
+    <li><strong>Flexbox-based</strong> - Modern, flexible layouts based on Flexbox</li>
+    <li><strong>Modular</strong> - Import only what you need</li>
+    <li><strong>Responsive</strong> - Mobile-first design philosophy</li>
+    <li><strong>Modern</strong> - Built with CSS custom properties and latest web standards</li>
+  </ul>
+  <div class="buttons">
+    <a hx-get="/html/bulmacomponents" hx-target="#bulma-content" hx-swap="innerHTML" class="button is-small is-primary mt-2">Explore Components</a>
+    <a hx-get="/html/bulmainfo" hx-target="#bulma-content" hx-swap="innerHTML" class="button is-small is-warning mt-2">Go Back</a>
+  </div>
+</div>
+{{ end }}
+
+{{ define "bulmacomponents" }}
+<div class="box mt-4">
+  <h3 class="title is-4">Bulma Components</h3>
+  <p>Bulma provides many built-in components:</p>
+  <div class="columns is-multiline">
+    <div class="column is-half">
+      <div class="notification is-primary">
+        <strong>Layout</strong>: Containers, level, media, hero, section, tiles
+      </div>
+    </div>
+    <div class="column is-half">
+      <div class="notification is-link">
+        <strong>Form</strong>: Input, textarea, select, checkbox, radio, file
+      </div>
+    </div>
+    <div class="column is-half">
+      <div class="notification is-success">
+        <strong>Elements</strong>: Button, content, icon, image, notification, progress, table, tag, title
+      </div>
+    </div>
+    <div class="column is-half">
+      <div class="notification is-warning">
+        <strong>Components</strong>: Breadcrumb, card, dropdown, menu, modal, navbar, pagination, panel, tabs
+      </div>
+    </div>
+  </div>
+  <a hx-get="/html/bulmafeatures" hx-target="#bulma-content" hx-swap="innerHTML" class="button is-small is-warning mt-2">Go Back</a>
+</div>
+{{ end }}
+
+{{ define "counter" }}
+<div class="box has-text-centered">
+  <h3 class="title is-4">Count: {{ . }}</h3>
+  <div class="buttons is-centered">
+    <button class="button is-primary" hx-post="/html/increment" hx-target="#counter-container" hx-swap="innerHTML">Increment</button>
+    <button class="button is-danger" hx-post="/html/reset" hx-target="#counter-container" hx-swap="innerHTML">Reset</button>
+  </div>
+</div>
+{{ end }}
+
+{{ define "userform" }}
+<form hx-post="/html/submitform" hx-target="#form-result" hx-swap="innerHTML" class="box">
+  <div class="field">
+    <label class="label">Name</label>
+    <div class="control">
+      <input class="input" type="text" name="name" placeholder="Enter your name">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Email</label>
+    <div class="control">
+      <input class="input" type="email" name="email" placeholder="Enter your email">
+    </div>
+  </div>
+  <div class="field">
+    <div class="control">
+      <button class="button is-link" type="submit">Submit</button>
+    </div>
+  </div>
+</form>
+{{ end }}
+
+{{ define "formsubmitted" }}
+<div class="notification is-success">
+  <p>Form submitted successfully!</p>
+  <p>Name: {{ .Name }}</p>
+  <p>Email: {{ .Email }}</p>
+</div>
+{{ end }}

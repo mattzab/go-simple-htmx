@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX Demo Page</title>
+    <!-- Include HTMX -->
+    <script src="static/htmx.min.js"></script>
+    <!-- Include Bulma CSS -->
+    <link rel="stylesheet" href="static/bulma.min.css">
+    <style>
+        .pointer { cursor: pointer; }
+        .has-text-info, .clickable { cursor: pointer; text-decoration: underline; }
+        .section { padding: 2rem 1.5rem; }
+        .card { height: 100%; display: flex; flex-direction: column; }
+        .card-content { flex-grow: 1; }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-1 has-text-centered">HTMX Demo Page</h1>
+            <h2 class="subtitle has-text-centered">A demonstration of HTMX capabilities with Bulma CSS</h2>
+            
+            <div class="columns is-multiline mt-5">
+                <!-- About Bulma Section -->
+                <div class="column is-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">About Bulma CSS</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <button class="button is-info is-fullwidth" hx-get="/html/bulmainfo" hx-target="#bulma-content" hx-swap="innerHTML">
+                                    What is Bulma CSS?
+                                </button>
+                                <div id="bulma-content" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- HTMX explanation -->
+                <div class="column is-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">Learn About HTMX</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <button class="button is-info is-fullwidth" hx-get="/html/explainhtmx" hx-target="#htmx-content" hx-swap="innerHTML">
+                                    What is HTMX?
+                                </button>
+                                <div id="htmx-content" class="mt-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Counter Example -->
+                <div class="column is-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">Server-Side Counter</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content">
+                                <div id="counter-container" hx-get="/html/counter" hx-trigger="load"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Form Submission -->
+                <div class="column is-half">
+                    <div class="card">
+                        <header class="card-header">
+                            <p class="card-header-title">Form Submission without Page Reload</p>
+                        </header>
+                        <div class="card-content">
+                            <div class="columns">
+                                <div class="column">
+                                    <div hx-get="/html/userform" hx-trigger="load"></div>
+                                </div>
+                                <div class="column">
+                                    <div id="form-result" class="content">
+                                        <div class="notification is-info">
+                                            Form results will appear here after submission
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
