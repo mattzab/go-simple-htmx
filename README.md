@@ -2,6 +2,8 @@
 
 A simple, elegant demonstration of building modern web applications using HTMX, Go, and Bulma CSS. This project follows the KISS (Keep It Simple, Stupid) principle while showcasing powerful features of modern web development.
 
+Go's template system makes it incredibly intuitive to write HTML that can be swapped into pages using HTMX. By combining Go's template syntax with HTMX's declarative attributes, you can create dynamic web applications with minimal code. The templates can be organized into reusable snippets, making it easy to maintain and update your UI components. When HTMX makes a request, Go renders these templates server-side, and the resulting HTML is seamlessly inserted into your page, creating a smooth, app-like experience without writing any JavaScript.
+
 ![Go Simple HTMX Demo](static/demo.png)
 
 ## 🌟 Features
@@ -16,7 +18,7 @@ A simple, elegant demonstration of building modern web applications using HTMX, 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/go-simple-htmx.git
+   git clone https://github.com/mattzab/go-simple-htmx.git
    cd go-simple-htmx
    ```
 
@@ -41,39 +43,6 @@ go-simple-htmx/
 └── templates/        # HTML templates
     ├── index.html    # Main page template
     └── snippets.html # Reusable HTML snippets
-```
-
-## 📚 Examples
-
-### 1. Dynamic Content Loading
-
-```html
-<button class="button is-info" 
-        hx-get="/html/bulmainfo" 
-        hx-target="#bulma-content" 
-        hx-swap="innerHTML">
-    What is Bulma CSS?
-</button>
-<div id="bulma-content"></div>
-```
-
-### 2. Server-Side Counter
-
-```html
-<div id="counter-container" 
-     hx-get="/html/counter" 
-     hx-trigger="load">
-</div>
-```
-
-### 3. Form Submission
-
-```html
-<form hx-post="/html/submitform" 
-      hx-target="#form-result" 
-      hx-swap="innerHTML">
-    <!-- form fields -->
-</form>
 ```
 
 ## 🔧 How It Works
@@ -104,10 +73,6 @@ go-simple-htmx/
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
