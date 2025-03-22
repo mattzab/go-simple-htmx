@@ -4,6 +4,8 @@ A simple, elegant demonstration of building modern web applications using HTMX, 
 
 Go's template system makes it incredibly intuitive to write HTML that can be swapped into pages using HTMX. By combining Go's template syntax with HTMX's declarative attributes, you can create dynamic web applications with minimal code. The templates can be organized into reusable snippets, making it easy to maintain and update your UI components. When HTMX makes a request, Go renders these templates server-side, and the resulting HTML is seamlessly inserted into your page, creating a smooth, app-like experience without writing any JavaScript.
 
+🔗 [Live Demo](https://go-simple-htmx.mattzab.com)
+
 ![Go Simple HTMX Demo](static/demo.png)
 
 ## 🌟 Features
