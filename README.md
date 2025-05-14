@@ -1,6 +1,6 @@
 # Go Simple HTMX Demo
 
-TL;DR: A frontend for backend devs, because unfortunately (for whatever reason) a frontend is still actually needed...
+TL;DR: A frontend for backend devs, because unfortunately a frontend is still actually needed... With this one old weird trick the frontend devs HATE, you (the backend dev) just became full stack.
 
 A simple showcase of building web apps with HTMX, Go, and Bulma CSS, because who needs the soul-crushing bloat of frontend frameworks? This project smirks at complexity, sticking to the KISS (Keep It Simple, Stupid) mantra while flexing the raw power of server-side sanity.
 
