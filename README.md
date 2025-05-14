@@ -1,10 +1,10 @@
 # Go Simple HTMX Demo
 
-TL;DR: A frontend for backend devs, because unfortunately a frontend is still actually needed... With this one old weird trick the frontend devs HATE, you (the backend dev) just became full stack.
+TL;DR: A frontend for backend devs, because unfortunately a frontend is still actually needed... With this one old weird trick the frontend devs HATE, you (the backend dev) just became full stack. Congratulations.
 
-A simple showcase of building web apps with HTMX, Go, and Bulma CSS, because who needs the soul-crushing bloat of frontend frameworks? This project smirks at complexity, sticking to the KISS (Keep It Simple, Stupid) mantra while flexing the raw power of server-side sanity.
+In just 6 files, we have a simple showcase of building web apps with HTMX, Go, and Bulma CSS, because who needs the soul-crushing bloat of frontend frameworks? This project kicks complexity in the you-know-what, sticking to the KISS (Keep It Simple, Stupid) mantra while flexing the raw power of server-side sanity.
 
-Go’s template system is so straightforward, it’ll make you wonder why you ever endured JavaScript-induced migraines. Pair it with HTMX’s declarative attributes, and you’re churning out dynamic web apps with less code than a todo list. Templates? Reusable snippets that laugh in the face of frontend chaos. HTMX pings the server, Go renders the HTML, and your page updates smoother than a backend dev’s ego—no JavaScript required, because we’re not masochists.
+Go’s template system is so simple and straightforward, it’ll make you wonder why you ever endured JavaScript-induced migraines. Pair it with HTMX’s declarative attributes, and you’re churning out dynamic web apps with less code than a todo list. Templates? Reusable snippets that laugh in the face of frontend framework chaos. HTMX pings the server, Go renders the HTML, and your page updates smoother than a backend dev’s ego—no JavaScript required, because we’re not masochists.
 
 🔗 [Live Demo](https://go-simple-htmx.mattzab.com)
 
