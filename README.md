@@ -6,11 +6,11 @@ In just 6 files, we have a simple showcase of building web apps with HTMX, Go, a
 
 Go’s template system is so simple and straightforward, it’ll make you wonder why you ever endured JavaScript-induced migraines. Pair it with HTMX’s declarative attributes, and you’re churning out dynamic web apps with less code than a todo list. Templates? Reusable snippets that laugh in the face of frontend framework chaos. HTMX pings the server, Go renders the HTML, and your page updates smoother than a backend dev’s ego—no JavaScript required, because we’re not masochists.
 
-🔗 [Live Demo](https://go-simple-htmx.mattzab.com)
+[Live Demo](https://go-simple-htmx.mattzab.com)
 
 ![Go Simple HTMX Demo](static/demo.png)
 
-## 🌟 Features
+## Features
 
 - **HTMX Integration**: Dynamic content loading without writing JavaScript
 - **Go Backend**: Fast, efficient server-side processing
@@ -18,7 +18,7 @@ Go’s template system is so simple and straightforward, it’ll make you wonder
 - **Interactive Examples**: Real-world demonstrations of common web patterns
 - **Zero JavaScript**: (Almost) No JavaScript required for core functionality
 
-## 🚀 Quick Start
+## Quick Start
 
 1. Clone the repository:
    ```bash
@@ -36,7 +36,7 @@ Go’s template system is so simple and straightforward, it’ll make you wonder
    http://localhost:8080
    ```
 
-## 🛠️ Project Structure
+## Project Structure
 
 ```
 go-simple-htmx/
@@ -49,13 +49,13 @@ go-simple-htmx/
     └── snippets.html # Reusable HTML snippets
 ```
 
-## 🔧 How It Works
+## How It Works
 
 1. **HTMX**: Handles all dynamic interactions through HTML attributes
 2. **Go**: Processes requests and renders HTML templates
 3. **Bulma**: Provides beautiful, responsive styling
 
-## 🎯 Key Concepts
+## Key Concepts
 
 ### HTMX Attributes
 - `hx-get`: Makes GET requests
@@ -74,17 +74,17 @@ go-simple-htmx/
 - Modern component library
 - No JavaScript dependencies
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [HTMX](https://htmx.org/) - For making web development simpler
 - [Bulma CSS](https://bulma.io/) - For beautiful, responsive styling
 - [Go](https://golang.org/) - For fast, efficient server-side processing
 
-## 📚 Resources
+## Resources
 
 - [HTMX Documentation](https://htmx.org/docs/)
 - [Bulma Documentation](https://bulma.io/documentation/)
